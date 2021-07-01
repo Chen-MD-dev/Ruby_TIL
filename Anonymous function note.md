@@ -46,6 +46,7 @@ p[]  # hello, world!
 p()
 # NoMethodError: undefined method `a' for main:Object
 ```
+## 함수명으로 호출 
 파이썬이나 자바스크립트 같이 함수 이름으로 접근하면 함수 자체에 접근할 수 있고 이를 직접 호출할 수 있지만 루비는 아님
 NomethodError 예외가 발생하는 이유는 말그대로 p라는 이름으로 정의된 함수가 존재하지 않기 때문이다.
 루비에서는 익명 함수와 기명 함수가 존재하는 공간이 다르기 때문이다 ( 다른 언어는 공간이 같은 경우가 있다 )
@@ -199,7 +200,7 @@ proc객체에서 break를 사용하면 LocalJumpError를 발생시킨다 -> retu
 반면에 람다를 사용하면 break는 람다객체 안으로 한정된다
 따라서 반복문 안에서 아무런 영향을 끼치지 않고 i==2 조건을 만족할 때 람다 안에서 break가 실행될 뿐이다
 ```ruby
-0.upto(3, %lambda{|i| puts; break if i == 2})
+0.upto(3, &lambda{|i| puts i; break if i == 2})
 # 0
 # 1
 # 2
