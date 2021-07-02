@@ -32,7 +32,7 @@ view -> controller : `params[:{태그명}]`
 ---
 
 ## 정보입력방법
-+ Form테그
++ Form테그로 입력
 
 form테그는 form테그와 input테그로 구성되어 있다
 
@@ -46,7 +46,8 @@ input테그는 정보를 받는 테그
 > 
 > name속성 : 정보의 이름 (id)
 
-+ url
++ url로 입력 
+
 routes.rb에서
 
 `get 'test/:x/:y' => 'home#test'`
